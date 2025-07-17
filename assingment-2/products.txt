@@ -1,0 +1,1 @@
+[{"id":1,"name":"iphone","price":100000},{"id":2,"name":"samsung","price":80000},{"id":3,"name":"oneplus","price":60000},{"id":4,"name":"nokia","price":30000},{"id":5,"name":"vivo","price":25000}]
