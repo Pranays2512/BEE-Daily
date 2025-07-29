@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Picker</title>
+    <style>
+        
+        #box {
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            color: white;
+            background-color: #888;
+            
+        }
+        #button,#stop {
+            padding: 12px 24px;
+            font-size: 1em;
+            border-radius: 8px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            
+        }
+        
+    </style>
+</head>
+<body>
+
+
+    <div id="box"></div>
+    <button id="button">Change Color</button>
+    <button id="stop">stop</button>
+<script>
+    let id=null;
+    const box = document.getElementById('box');
+    const button = document.getElementById('button');
+    const stop = document.getElementById('stop');
+
+    button.addEventListener('click', () => {
+        id = setInterval(()=>{
+        const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
+        console.log(randomColor);
+        box.style.backgroundColor = randomColor;
+        },500);
+       
+    });
+    stop.addEventListener('click', () => {
+       if(id)
+       clearInterval(id);
+       
+    });
+
+</script>
+    
+
+</body>
+</html>
