@@ -85,13 +85,13 @@ app.get('/api/todos', function(req, res) {
 
 app.post('/api/todos', function(req, res) {
   var task = req.body.task;
-  if (!task) return res.status(400).json({ error: 'Task required' });
+  if (!task) return res.send(err)
   readJSON(todoFile, [], function(err, todos) {
-    if (err) return res.status(500).json({ error: err.message });
+    if (err) return res.send(err)
     var newTodo = { id: Date.now(), task: task, completed: false };
     todos.push(newTodo);
     writeJSON(todoFile, todos, function(err) {
-      if (err) return res.status(500).json({ error: 'Failed to save todo.' });
+      if (err) return res.send(err);
       res.json(newTodo);
     });
   });
