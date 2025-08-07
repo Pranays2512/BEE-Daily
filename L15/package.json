@@ -16,8 +16,8 @@
     "url": "https://github.com/Pranays2512/BEE-Daily/issues"
   },
   "homepage": "https://github.com/Pranays2512/BEE-Daily#readme",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "description": ""
 }
