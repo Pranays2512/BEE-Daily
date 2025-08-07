@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="login.css">
+    <title>NEXORA</title>
+</head>
+<body>
+    <video autoplay muted loop id="background-video">
+        <source src="nightsky copy.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h1 id="heading">nexora</h1>
+
+    <div class="form-container">
+        <form id="login-form" class="form front-form">
+            <h2>WELCOME BACK!</h2>
+            <input type="email" id="email" name="email" required placeholder="Email"><br><br>
+            <input type="password" id="password" name="password" required placeholder="Password"><br><br>
+            <input type="submit" value="LOGIN" id="submit">
+        </form>
+
+        <form id="signup-form" class="form back-form">
+            <h2>GLAD YOU COULD JOIN US!</h2>
+            <input type="email" id="email" name="email">
+            <input type="password" id="password" name="password">
+
+            <input type="submit" value="SIGN UP" id="signup-submit">
+        </form>
+    </div>
+
+    <button id="switch-to-signup">Sign Up</button>
+    <button id="switch-to-login" style="display:none;">Login</button>
+
+    <script src="login.js"></script>
+</body>
+</html>
