@@ -1,5 +1,3 @@
-const { response } = require("express")
-
 const form=document.querySelector("#form")
 const email=document.querySelector("#email")
 const password=document.querySelector("#password")
@@ -8,7 +6,6 @@ function adduser(email,password){
     let newUser={
         email:email,
         password:password
-    
     }
     fetch("/users",{
         method:"POST",
@@ -16,26 +13,24 @@ function adduser(email,password){
         headers:{
             "Content-Type":"application/json"
         }
-  
-    
-    }).then((res) =>{
-        return        res.json({
-    success:true,
-    data:newItem,
-    message:"user added"
-
-})
-    }).then((data)=>{
-        console.log(data)   
-    }).catch((err)=>{
-             return  res.json({
-    success:false,
-    message:"user not added"
-
-})
     })
-    
-
+    .then(res => {
+       
+        if (!res.ok) {
+          
+            throw new Error('Network response was not ok.');
+        }
+       
+        return res.json();
+    })
+    .then(data => {
+        console.log(data);
+        alert("User added successfully!");
+    })
+    .catch(err => {
+        console.error(err);
+        alert("Failed to add user.");
+    })
 }
 
 form.addEventListener("submit",function(e){
