@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../Downloads/lec_22"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "BEE-Daily"
+	}
+}
